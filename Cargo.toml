@@ -1,0 +1,14 @@
+[package]
+name = "herdr-input-bar"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "herdr-input-bar"
+path = "src/main.rs"
+
+[dependencies]
+crossterm = "0.28"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+unicode-width = "0.2"

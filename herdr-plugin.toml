@@ -1,0 +1,21 @@
+id = "alanus.input-bar"
+name = "Input Bar"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Dedicated composer below a Target Pane"
+platforms = ["macos", "linux"]
+
+[[build]]
+command = ["cargo", "build", "--release"]
+
+[[actions]]
+id = "open"
+title = "Open Input Bar"
+contexts = ["workspace"]
+command = ["target/release/herdr-input-bar", "open"]
+
+[[panes]]
+id = "bar"
+title = "Input Bar"
+placement = "split"
+command = ["target/release/herdr-input-bar", "bar"]
